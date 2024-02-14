@@ -53,7 +53,7 @@ function App() {
           </div>
         </section>
 
-        <div className='fixed bottom-12 left-8'>
+        <div className='fixed top-32 right-0'>
           <button
             onClick={toggleDarkMode}
             className="px-4 py-2 rounded-md bg-gray-800 text-white"
