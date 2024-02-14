@@ -6,8 +6,10 @@ import { BsSunFill } from "react-icons/bs";
 import { FaMoon } from "react-icons/fa";
 import React, { useState, useEffect } from 'react';
 function App() {
+
   const [isDarkTheme, setIsDarkTheme] = useState(null);
-  const [theme, setTheme] = useState(false);
+
+
   useEffect(() => {
     let isDark = localStorage.getItem("isDark");
     if (isDark == 'true') {
@@ -32,35 +34,35 @@ function App() {
 
 
 
-  
+
 
   return (
     <>
-    <div>
+      <div>
 
-    <section id='home'  className='bg-black'>
-        <div  className='container mx-auto max-w-[1340px]'>
-          <Navbar/>
-          <Hero/>
+        <section id='home' className='bg-black'>
+          <div className='container mx-auto max-w-[1340px]'>
+            <Navbar />
+            <Hero />
+          </div>
+        </section>
+
+        <section id='features' className='py-10 dark:bg-stone-900 dark:text-white'>
+          <div className='container mx-auto max-w-[1340px]'>
+            <Features />
+          </div>
+        </section>
+
+        <div className='fixed bottom-12 left-8'>
+          <button
+            onClick={toggleDarkMode}
+            className="px-4 py-2 rounded-md bg-gray-800 text-white"
+          >
+            {(isDarkTheme == "false" || isDarkTheme == null) ? <FaMoon /> : <BsSunFill />}
+          </button>
         </div>
-      </section>
+      </div>
 
-      <section id='features' className='py-10 dark:bg-stone-900 dark:text-white'>
-        <div className='container mx-auto max-w-[1340px]'>
-          <Features />
-        </div>
-      </section>
-
-      <div className='fixed bottom-12 left-8'>
-                <button
-                    onClick={toggleDarkMode}
-                    className="px-4 py-2 rounded-md bg-gray-800 text-white"
-                >
-                    {(theme == false) ? <FaMoon /> : <BsSunFill />}
-                </button>
-            </div>
-    </div>
-      
     </>
   )
 }
