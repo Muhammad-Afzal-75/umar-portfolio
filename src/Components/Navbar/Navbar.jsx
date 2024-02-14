@@ -56,19 +56,6 @@ const Navbar = () => {
         setOpen(false);
     };
 
-
-    useEffect(() => {
-        // const isDarkMode = localStorage.getItem('darkMode') === 'true';
-        // setTheme(isDarkMode);
-        // if (theme == false) {
-        //   document.documentElement.classList.remove('dark');
-        // } else {
-        //   document.documentElement.classList.add('dark');
-        // }
-    }, []);
-
-  
-
     return (
         <>
             <Button type="primary" onClick={showDrawer} className='text-2xl mt-2 md:hidden'>
@@ -81,7 +68,7 @@ const Navbar = () => {
                 <div className='hidden md:block'>
                     {
                         NavItems.map((item) => {
-                            return <a href={item.section} className='text-white p-3 px-5 hover:text-red-600 font-bold text-lg  inline-block'> {item.title} </a>
+                            return <a href={item.section} className='sm:text-white text-black p-3 px-5 hover:text-red-600 font-bold text-lg  inline-block'> {item.title} </a>
                         })
                     }
                 </div>
@@ -89,11 +76,11 @@ const Navbar = () => {
             </div>
 
 
-            <Drawer title="Navbar" onClose={onClose} open={open} placement='left' >
+            <Drawer title="Navbar"  onClose={onClose} open={open} placement='left' className='dark:bg-black  bg-white' >
                 <div className=''>
                     {
                         NavItems.map((item) => {
-                            return <a href={item.section} className='text-black dark:text-white p-3 px-5 hover:text-red-600 font-bold text-lg block'> {item.title} </a>
+                            return <a href={item.section} className='text-black dark:text-white text-center border-b-2 p-3 px-5 hover:text-red-600 font-bold text-lg block'> {item.title} </a>
                         })
                     }
                 </div>
