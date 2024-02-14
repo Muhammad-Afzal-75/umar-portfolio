@@ -5,6 +5,7 @@ import Features from './Components/Features/Features'
 import { BsSunFill } from "react-icons/bs";
 import { FaMoon } from "react-icons/fa";
 import React, { useState, useEffect } from 'react';
+import Portfolio from './Components/Portfolio/Portfolio';
 function App() {
 
   const [isDarkTheme, setIsDarkTheme] = useState(null);
@@ -47,11 +48,43 @@ function App() {
           </div>
         </section>
 
-        <section id='features' className='py-10 dark:bg-stone-900 dark:text-white'>
+
+
+
+
+
+
+
+
+        <section id='features' className='py-32 dark:bg-stone-900 dark:text-white'>
           <div className='container mx-auto max-w-[1340px]'>
             <Features />
           </div>
         </section>
+
+
+
+
+
+
+
+
+
+        <section id='portfolio' className='py-28 dark:bg-black bg-[#efefef] dark:text-white'>
+          <div className='container mx-auto max-w-[1340px] px-4'>
+            <Portfolio />
+          </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
 
         <div className='fixed top-32 right-0'>
           <button
