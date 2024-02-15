@@ -67,7 +67,7 @@ const Navbar = () => {
                     <div className='hidden xl:block'>
                         {
                             NavItems.map((item) => {
-                                return <a href={item.section} className='sm:text-white text-black p-3 px-5 hover:text-red-600 font-bold text-lg  inline-block'> {item.title} </a>
+                                return <a href={item.section} className='sm:text-white text-black p-3 px-5 hover:text-red-600 font-bold text-lg  inline-block' id='/' > {item.title} </a>
                             })
                         }
                     </div>
@@ -83,7 +83,7 @@ const Navbar = () => {
                     <div className=''>
                         {
                             NavItems.map((item) => {
-                                return <a href={item.section} className='text-black dark:text-white text-center border-b-2 p-3 px-5 hover:text-red-600 font-bold text-lg block'> {item.title} </a>
+                                return <a href={item.section} className='text-black dark:text-white text-center border-b-2 p-3 px-5 hover:text-red-600 font-bold text-lg block'id='#features' > {item.title} </a>
                             })
                         }
                     </div>

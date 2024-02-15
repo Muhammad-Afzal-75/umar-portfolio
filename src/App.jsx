@@ -70,7 +70,7 @@ function App() {
 
 
 
-        <section id='portfolio' className='py-28 dark:bg-black bg-[#efefef] dark:text-white'>
+        <section id='portfolio' className='py-28 dark:bg-black rounded-lg bg-[#efefef] dark:text-white'>
           <div className='container mx-auto max-w-[1340px] px-4'>
             <Portfolio />
           </div>
