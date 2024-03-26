@@ -84,7 +84,10 @@ function Portfolio() {
     },
     {
       id: 6,
-      Path: <img src={image6} alt='' className='rounded-lg' />,
+      Path: <img src={image6} alt='' className='rounded-lg'
+      
+      
+       />,
       title: "Graphic",
       heading: "How To Trun Agency From Zero To Hero"
     },
